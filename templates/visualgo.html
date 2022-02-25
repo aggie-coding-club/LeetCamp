@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<!-- Below are the links to different pages -->
+
+<!-- The first three will link to a page on linear search, then binary search, and then linked lists -->
+
+<div id="links">
+
+    <div class="visualgo-link">
+
+        <a href="{{ url_for('linearSearch') }}">Linear Search</a>
+    
+    </div>
+    
+    <div class="visualgo-link">
+    
+        <a href="{{ url_for('binarySearch') }}">Binary Search</a>
+    
+    </div>
+
+    <div class="visualgo-link">
+    
+        <a href="{{ url_for('linkedList') }}">Linked List</a>
+        
+    </div>
+
+</div>
+
+{% endblock %}
