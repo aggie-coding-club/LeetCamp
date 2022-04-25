@@ -1,0 +1,34 @@
+.square-box .box-content {
+    position:relative;
+    width: 50%;
+    overflow: hidden;
+    background:#34568B;
+}
+
+/* .square-box:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+} */
+
+.square-box {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 150px;
+    width: 30vw;
+    height: 30vw;
+}
+
+.box-content{
+    position: absolute;
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+
+/* Styling for sorting visualization algorithms */
+
+/* .head{
+
+} */

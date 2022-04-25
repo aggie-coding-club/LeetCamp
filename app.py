@@ -30,5 +30,13 @@ def binarySearch():
 def linkedList():
     return render_template("linkedList.html")
 
+@app.route("/visualgo/sorting")
+def sorting():
+    return render_template("sorting.html")
+
+@app.route("/sortingTemplates/selectionSort", methods=['GET'])
+def selectionSort():
+    return render_template("sortingTemplates/selectionSort.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
