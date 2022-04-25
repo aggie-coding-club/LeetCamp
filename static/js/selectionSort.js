@@ -52,9 +52,6 @@ async function selectionSort(){
     var minimumIdx = 0;
     for(var i = 0; i < arrayBars.length; i++){
       minimumIdx = i;
-
-      if(isStopped == 1) break;
-
       arrayBars[i].style.backgroundColor = "darkblue"; // Change this color later to something more user-friendly
       for(var j = i + 1; j < arrayBars.length; j++){
         arrayBars[j].style.backgroundColor = "red";
@@ -81,11 +78,15 @@ async function selectionSort(){
         }
 
         if(flag == 1) await pauseAlgorithm();
+        
         if (isStopped == 1){
           arrayBars[i].style.backgroundColor = "rgb(0, 183, 255)";
           arrayBars[j].style.backgroundColor = "rgb(0, 183, 255)";
           arrayBars[minimumIdx].style.backgroundColor = "rgb(0, 183, 255)";
-          break;
+          document.getElementById("generate-arr-button").disabled = false;
+          document.getElementById("selection-button").disabled = false;
+          isStopped = 0;
+          return;
         }
       }
 
