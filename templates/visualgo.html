@@ -10,29 +10,19 @@
 
 <!-- The first three will link to a page on linear search, then binary search, and then linked lists -->
 
-<div id="links">
+<div class="links">
+    
+    <a class="visualgo-link" href="{{ url_for('sorting') }}">
+        <div>
+            Sorting Algorithms
+        </div>
+    </a>
 
-    <div class="visualgo-link">
-
-        <a href="{{ url_for('linearSearch') }}">Linear Search</a>
-    
-    </div>
-    
-    <div class="visualgo-link">
-    
-        <a href="{{ url_for('binarySearch') }}">Binary Search</a>
-    
-    </div>
-
-    <div class="visualgo-link">
-    
-        <a href="{{ url_for('linkedList') }}">Linked List</a>
-        
-    </div>
-
-    <div class="visualgo-link">
-        <a href="{{ url_for('sorting') }}">Sorting Page</a>
-    </div>
+    <a class="visualgo-link" href="{{ url_for('pathfinding') }}">
+        <div>
+            Pathfinding Algorithms
+        </div>
+    </a>
 
 </div>
 

@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='sortingTemplates.css') }}">
+
+<section class = "head">Bubble Sort</section>
+<section class = "algorithm-container">
+
+    <!-- All bar div elements will go inside here -->
+
+</section>
+
+<button class = "btn btn-primary btn1" onclick="generateArray()" id="generate-arr-button"> Generate New Array </button>
+
+<!-- Button for activating the Selection Sort algorithm -->
+<button class="btn btn-secondary btn2" onclick="bubbleSort()" id="selection-button">Visualize Bubble Sort</button>
+
+<button class="btn btn-secondary" onclick="pauseAlgorithm(this)" id="halt-algorithm">Pause</button>
+<button class="btn btn-secondary" id="play-algorithm">Play</button>
+<button class="btn btn-secondary" id="stop-algorithm">Stop</button>
+
+</button>
+
+<!-- <script src="../../static/js/selectionSort.js"></script> -->
+<script src="{{ url_for('static', filename='js/bubbleSort.js') }}"></script>
+{% endblock %}

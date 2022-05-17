@@ -5,70 +5,31 @@
 {% endblock %}
 
 {% block body %}
-    <!-- A second navigation bar? 
-        ------------------------
-        |                      |
-        |                      |
-        |         bars         | 
-        |                      | 
-        |       controls       | 
-        |______________________|
-
-        - Let there be a dropdown list where the user can select which sorting algorithm to visualize
-            - Merge Sort
-            - Bubble Sort
-            - Quick Sort
-            ...
-
-    -->
 
     <!-- Center of page -->
-    <div class = "page-center">
+    <div class = "links">
 
         <!-- Create box links to link to sorting algorithm pages -->
-        <div class="square-box">
 
-            <div class="box-content">
-                <!-- TODO: Fix this -->
-                <a href="{{ url_for('selectionSort') }}">Selection Sort</a>
-            </div>
+            <a class="visualgo-link" href="{{ url_for('selectionSort') }}">
+                <div>
+                    Selection Sort
+                </div>
+            </a>
 
-        </div>
 
-        <div class="square-box">
+            <a class="visualgo-link" href="{{ url_for('bubbleSort') }}">
+                <div>
+                    Bubble Sort
+                </div>
+            </a>
 
-            <div class="box-content">
-                <h3>Bubble Sort</h3>
-            </div>
-
-        </div>
-
-        <div class="square-box">
-
-            <div class="box-content">
-                <h3>Merge Sort</h3>
-            </div>
-
-        </div>
-
+            <a class="visualgo-link" href="">
+                <div>
+                    Merge Sort
+                </div>
+            </a>
     </div>
-
-    <!-- Control Panel -->
-    <!-- <nav class="navbar fixed-bottom navbar-dark bg-dark">
-
-        <ul class="navbar-nav" style="color:white">
-            <li class="nav-item active">
-                Range of data
-            </li>
-            <li class="nav-item">
-                Algorithm
-            </li>
-            <li class="nav-item">
-              Run
-            </li>
-        </ul>
-
-    </nav> -->
 
     <script src="../static/js/bubbleSort.js" ></script>
 {% endblock %}

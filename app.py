@@ -18,17 +18,9 @@ def visualgo():
 def playground():
     return render_template("playground.html")
 
-@app.route("/visualgo/linearSearch")
-def linearSearch():
-    return render_template("linearSearch.html")
-
-@app.route("/visualgo/binarySearch")
-def binarySearch():
-    return render_template("binarySearch.html")
-
-@app.route("/visualgo/linkedList")
-def linkedList():
-    return render_template("linkedList.html")
+@app.route("/visualgo/pathfinding")
+def pathfinding():
+    return render_template("pathfinding.html")
 
 @app.route("/visualgo/sorting")
 def sorting():
@@ -37,6 +29,10 @@ def sorting():
 @app.route("/sortingTemplates/selectionSort", methods=['GET'])
 def selectionSort():
     return render_template("sortingTemplates/selectionSort.html")
+
+@app.route("/sortingTemplates/bubbleSort", methods=['GET'])
+def bubbleSort():
+    return render_template("sortingTemplates/bubbleSort.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

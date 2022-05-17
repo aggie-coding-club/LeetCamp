@@ -12,39 +12,37 @@ document.getElementById("stop-algorithm").addEventListener("click", function(){
   isStopped = 1;
 })
 
-// Generate the sorting bars (default value is 20)
-function generateArray(num = 20){
+function generateArray(num = 10){
 
-    var isPresent = document.querySelectorAll("div");
+  var isPresent = document.querySelectorAll("div");
 
-    if(isPresent.length > 0){
-      container.innerHTML = '';
-    }
+  if(isPresent.length > 0){
+    container.innerHTML = '';
+  }
 
-    for(let i = 0; i < num; i++){
-        // Generate a random value from 1 - 100  
-        const value = Math.floor(Math.random() * 100) + 1;
+  for(let i = 0; i < num; i++){
+      // Generate a random value from 1 - 100  
+      const value = Math.floor(Math.random() * 100) + 1;
 
-        // Create a div and add a class "bar" to it for each bar
-        const bar = document.createElement("div");
-        bar.classList.add("bar");
-        bar.style.height = `${value * 3}px`;
+      // Create a div and add a class "bar" to it for each bar
+      const bar = document.createElement("div");
+      bar.classList.add("bar");
+      bar.style.height = `${value * 3}px`;
 
-        bar.style.transform = `translateX(${i * 30}px)`;
-        // equivalent in CSS to transform: translateX(...)
+      bar.style.transform = `translateX(${i * 30}px)`;
+      // equivalent in CSS to transform: translateX(...)
 
-        // We want the random integer value placed within each bar
-        const label = document.createElement("label");
-        label.classList.add("bar-value");
-        label.innerHTML = value;
-        bar.appendChild(label);
-        container.appendChild(bar);
-    }
+      // We want the random integer value placed within each bar
+      const label = document.createElement("label");
+      label.classList.add("bar-value");
+      label.innerHTML = value;
+      bar.appendChild(label);
+      container.appendChild(bar);
+  }
 }
 
 // We need an async/await function for each of our algorithms
-// Sorting algorithms are still really fast. So fast, that it'd be useless to visualize them at their intended speed
-
+// Sorting algorithms are still pretty fast (relatively). Fast enough that it'd be useless to visualize them at their intended speed
 async function selectionSort(){
 
     let arrayBars = document.querySelectorAll(".bar");
@@ -78,7 +76,7 @@ async function selectionSort(){
         }
 
         if(flag == 1) await pauseAlgorithm();
-        
+
         if (isStopped == 1){
           arrayBars[i].style.backgroundColor = "rgb(0, 183, 255)";
           arrayBars[j].style.backgroundColor = "rgb(0, 183, 255)";
@@ -142,11 +140,3 @@ function pauseAlgorithm(){
 
   })
 }
-
-// Disable user buttons
-// function disableUserButtons(){
-//   document.getElementById("generate-arr-button").disabled = true;
-//   document.getElementById("generate-arr-button").style.backgroundColor = "#d8b6ff";
-//   document.getElementById("selection-button").disabled = true;
-//   document.getElementById("selection-button").style.backgroundColor = "#d8b6ff";
-// }
