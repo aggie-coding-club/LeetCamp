@@ -35,6 +35,11 @@
     color: #F9F3EE;
 }
 
+#indices {
+    height: 20px;
+    width: 600px;
+    margin: auto;
+}
 
 /* .head{
 

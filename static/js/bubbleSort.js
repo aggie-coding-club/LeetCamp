@@ -105,13 +105,6 @@ async function bubbleSort(){
       
       }
 
-      // Write some code to interface with the HTML page
-      // await new Promise((res) =>
-      //   setTimeout(() => {
-      //     res();
-      //   }, 300)
-      // );
-
         arrayBars[arrayBars.length - i - 1].style.backgroundColor = "rgb(49, 226, 13)";
 
     }

@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='sortingTemplates.css') }}">
+
+<section class = "head">Quick Sort</section>
+<section class = "algorithm-container">
+
+    <!-- All bar div elements will go inside here -->
+
+</section>
+<div id="indices"></div>
+
+<button class = "btn btn-primary btn1" onclick="generateArray()" id="generate-arr-button"> Generate New Array </button>
+
+<!-- Button for activating the Selection Sort algorithm -->
+<button class="btn btn-secondary btn2" onclick="quickSort()" id="selection-button">Visualize Quick Sort</button>
+
+<button class="btn btn-secondary" onclick="pauseAlgorithm(this)" id="halt-algorithm">Pause</button>
+<button class="btn btn-secondary" id="play-algorithm">Play</button>
+<button class="btn btn-secondary" id="stop-algorithm">Stop</button>
+
+</button>
+
+<script src="{{ url_for('static', filename='js/quickSort.js') }}"></script>
+{% endblock %}

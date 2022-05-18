@@ -34,5 +34,9 @@ def selectionSort():
 def bubbleSort():
     return render_template("sortingTemplates/bubbleSort.html")
 
+@app.route("/sortingTemplates/quickSort", methods=['GET'])
+def quickSort():
+    return render_template("sortingTemplates/quickSort.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

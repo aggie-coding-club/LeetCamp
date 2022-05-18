@@ -33,3 +33,8 @@
     text-align: center;
 }
 
+#indices {
+    height: 20px;
+    width: 600px;
+    margin: auto;
+}
