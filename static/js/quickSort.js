@@ -49,7 +49,7 @@ function generateIndices(){
         var indexElement = document.createElement("div");
         indexElement.classList.add("idx");
         indexElement.style.height = `${20}px`;
-        indexElement.style.transform = `translate(${i * 30}px)`;
+        indexElement.style.transform = `translateX(${i * 30}px)`;
 
         // Adding these indices
         var indexElementLabel = document.createElement("label");
@@ -152,8 +152,14 @@ async function quickSort(leftIdx = 0, rightIdx = numElements - 1, delay = 300){
     if(leftIdx < rightIdx){
         var pivot = await quickSortLometo(leftIdx, rightIdx);
         await quickSort(leftIdx, pivot - 1);
-        await quickSort(pivot + 1, rightIdx);
+        await quickSort(pivot + 1, rightIdx);  
     }
+
+    var arrayBars = document.querySelectorAll(".bar");
+    for(let i = 0; i < arrayBars.length; i++){
+      arrayBars[i].style.backgroundColor = "rgb(49, 226, 13)";
+    }
+
 }
 
 // Regenerate a new array on page reload

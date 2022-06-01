@@ -1,6 +1,8 @@
 const container = document.querySelector(".algorithm-container");
 var flag = 0;
 var isStopped = 0;
+const defaultNumElements = 10;
+var numElements = defaultNumElements;
 
 document.getElementById("halt-algorithm").addEventListener("click", function(){
   flag = 1;
@@ -39,6 +41,25 @@ function generateArray(num = 10){
       bar.appendChild(label);
       container.appendChild(bar);
   }
+}
+
+var indexContainer = document.getElementById("indices");
+function generateIndices(){
+    for(var i = 0; i < numElements; i++){
+        var indexElement = document.createElement("div");
+        indexElement.classList.add("idx");
+        indexElement.style.height = `${20}px`;
+        indexElement.style.transform = `translateX(${i * 30}px)`;
+
+        // Adding these indices
+        var indexElementLabel = document.createElement("label");
+        indexElementLabel.classList.add("idx-id");
+        indexElementLabel.innerText = i;
+
+        // Append index blocks to the HTML page
+        indexElement.appendChild(indexElementLabel);
+        indexContainer.appendChild(indexElement);
+    }
 }
 
 // Promise function to swap elements
@@ -119,6 +140,7 @@ async function bubbleSort(){
 }
 
 generateArray();
+generateIndices();
 
 // Regenerate a new array on page reload
 function generate(){

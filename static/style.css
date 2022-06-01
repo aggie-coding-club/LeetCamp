@@ -35,6 +35,20 @@
     color: #F9F3EE;
 }
 
+.idx {
+    width: 28px;
+    position: absolute;
+    transition: 0.2s all ease;
+}
+
+.idx-id {
+    position: absolute;
+    color: black;
+    margin-top: 1px;
+    width: 100%;
+    text-align: center;
+}
+
 #indices {
     height: 20px;
     width: 600px;
