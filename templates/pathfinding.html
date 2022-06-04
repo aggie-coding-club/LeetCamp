@@ -1,26 +1,79 @@
-% extends 'layout.html' %}
+{% extends 'layout.html' %}
 
 {% block head %}
 
 {% endblock %}
 
 {% block body %}
-    <!-- Center of page -->
-    <div class = "page-center">
 
-        <div class="square-box">
+    <div id="nav-div">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a id="refresh" class="navbar-brand" href="#">Pathfinding Visualizer</a>
+                </div>
 
-        </div>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Algorithms <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li id="start-dijkstra">Dijkstra's Algorithm</li>
+                            <li id="start-astar">A* Algorithm</li>
+                            <li id="start-swarm">Swarm Algorithm</li>
+                            <li id="start-bfs">Breadth-First Search</li>
+                            <li id="start-dfs">Depth-First Search</li>
+                            <li id="start-greedy">Greedy Search</li>
+                        </ul>
+                    </li>
 
-        <div class="square-box">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mazes/Patterns <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li id="create-recursive-maze-one">Recursive Division</li>
+                            <li id="create-recursive-maze-two">Recursive Division w/ vertical skew</li>
+                            <li id="create-recursive-maze-three">Recursive Division w/ horizontal skew</li>
+                            <li id="create-random-maze">Random Maze</li>
+                            <li id="create-weighted-maze">Weighted Maze</li>
+                            <li id="create-stair-maze">Stair Maze</li>
+                        </ul>
+                    </li>
+                    <li id="add-bomb"><a href="#">Add Bomb</a></li>
+                    <li id="pathfinder-start"><button id="pathfinder-start-button" class="btn btn-default navbar-btn" type="button">Visualize!</button></li>
+                    <li id="clear-board"><a href="#">Clear Board</a></li>
+                    <li id="clear-walls"><a href="#">Clear Walls/Weights</a></li>
+                    <li id="clear-path"><a href="#">Clear Path</a></li>
 
-        </div>
+                    <li class="dropdown">
+                        <a id="adjust-speed" class="dropdown-toggle" data-toggle="dropdown" href="#">Speed: Fast <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li id="adjust-fast"><a href="#">Fast</a></li>
+                            <li id="adjust-average"><a href="#">Average</a></li>
+                            <li id="adjust-slow"><a href="#">Slow</a></li>
+                        </ul>
+                    </li>
 
-        <div class="square-box">
-
-        </div>
-
+                </ul>
+            </div>
+        </nav>
     </div>
 
-    <script src="../static/js/bubbleSort.js" ></script>
+    <div id="main-grid">
+        <div id="main-text">
+            <ul>
+                <li> <div class="start"></div> Start Node </li>
+                <li> <div class="target"></div> Target Node </li>
+                <li id="bomb-legend"> <div class="object"> </div> Bomb Node </li>
+                <li id="weight-legend"> <div clas="borderless-weight"> </div> Weight Node </li>
+                <li> <div class="unvisited"></div> Unvisited Node </li>
+                <li> <div class="visited"></div> <div class="visited-object"></div> Visited Nodes</li>
+                <li> <div class="shortest-path"></div> Shortest-Path Node </li>
+                <li><div class="wall"></div> Wall Node </li>
+            </ul>
+        </div>
+        <div id="algorithm-descriptor">Pick any algorithm and visualize it!</div>
+        <table id="board"/>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../static/js/browser/bundle.js"></script>
 {% endblock %}
