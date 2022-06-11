@@ -216,44 +216,44 @@ function getNeighbors(id, nodes, boardArray) {
     let x2 = parseInt(targetCoordinates[0]);
     let y2 = parseInt(targetCoordinates[1]);
     if (x2 < x1) {
-      if (nodeOne.otherdirection === "up") {
+      if (nodeOne.otherDirection === "up") {
         return [1, ["f"], "up"];
-      } else if (nodeOne.otherdirection === "right") {
+      } else if (nodeOne.otherDirection === "right") {
         return [2, ["l", "f"], "up"];
-      } else if (nodeOne.otherdirection === "left") {
+      } else if (nodeOne.otherDirection === "left") {
         return [2, ["r", "f"], "up"];
-      } else if (nodeOne.otherdirection === "down") {
+      } else if (nodeOne.otherDirection === "down") {
         return [3, ["r", "r", "f"], "up"];
       }
     } else if (x2 > x1) {
-      if (nodeOne.otherdirection === "up") {
+      if (nodeOne.otherDirection === "up") {
         return [3, ["r", "r", "f"], "down"];
-      } else if (nodeOne.otherdirection === "right") {
+      } else if (nodeOne.otherDirection === "right") {
         return [2, ["r", "f"], "down"];
-      } else if (nodeOne.otherdirection === "left") {
+      } else if (nodeOne.otherDirection === "left") {
         return [2, ["l", "f"], "down"];
-      } else if (nodeOne.otherdirection === "down") {
+      } else if (nodeOne.otherDirection === "down") {
         return [1, ["f"], "down"];
       }
     }
     if (y2 < y1) {
-      if (nodeOne.otherdirection === "up") {
+      if (nodeOne.otherDirection === "up") {
         return [2, ["l", "f"], "left"];
-      } else if (nodeOne.otherdirection === "right") {
+      } else if (nodeOne.otherDirection === "right") {
         return [3, ["l", "l", "f"], "left"];
-      } else if (nodeOne.otherdirection === "left") {
+      } else if (nodeOne.otherDirection === "left") {
         return [1, ["f"], "left"];
-      } else if (nodeOne.otherdirection === "down") {
+      } else if (nodeOne.otherDirection === "down") {
         return [2, ["r", "f"], "left"];
       }
     } else if (y2 > y1) {
-      if (nodeOne.otherdirection === "up") {
+      if (nodeOne.otherDirection === "up") {
         return [2, ["r", "f"], "right"];
-      } else if (nodeOne.otherdirection === "right") {
+      } else if (nodeOne.otherDirection === "right") {
         return [1, ["f"], "right"];
-      } else if (nodeOne.otherdirection === "left") {
+      } else if (nodeOne.otherDirection === "left") {
         return [3, ["r", "r", "f"], "right"];
-      } else if (nodeOne.otherdirection === "down") {
+      } else if (nodeOne.otherDirection === "down") {
         return [2, ["l", "f"], "right"];
       }
     }
