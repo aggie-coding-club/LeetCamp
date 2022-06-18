@@ -10,7 +10,7 @@ function Node(id, status){
     this.totalDistance = Infinity;
     this.heuristicDistance = null;
     this.weight = 0;
-    this.relateesToObject = false;
+    this.relatesToObject = false;
     this.overwriteObjectRelation = false;
 
     this.otherId = id;
