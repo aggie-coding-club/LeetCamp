@@ -1,6 +1,6 @@
 # LeetCamp
 
-The code in this repo houses a web-based algorithm visualization tool.
+This repo houses a web-based algorithm visualization tool.
 
 This web app was designed initially to help Computer Science students better understand algorithms and data structures... by building an app that visualizes them.
 
